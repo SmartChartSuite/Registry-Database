@@ -1,0 +1,18 @@
+create table viewer_data
+(
+    viewer_data_id         integer not null
+        constraint user_data_pk
+            primary key,
+    observation_id         integer not null,
+    case_id                integer not null,
+    person_id              integer not null,
+    flag                   varchar(20),
+    annotation             varchar(100),
+    observation_concept_id integer
+);
+
+alter table viewer_data
+    owner to postgres;
+
+create unique index user_data_user_data_id_uindex
+    on viewer_data (viewer_data_id);

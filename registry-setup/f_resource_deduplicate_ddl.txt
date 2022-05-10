@@ -1,0 +1,20 @@
+-- auto-generated definition
+create table f_resource_deduplicate
+(
+    id                     integer     not null
+        constraint f_resource_deduplicate_pk
+            primary key,
+    domain_id              varchar(20) not null,
+    omop_id                bigint      not null,
+    fhir_resource_type     varchar     not null,
+    fhir_identifier_system varchar     not null,
+    fhir_identifier_value  varchar     not null
+);
+
+alter table f_resource_deduplicate
+    owner to postgres;
+
+create unique index f_resource_deduplicate_id_uindex
+    on f_resource_deduplicate (id);
+
+

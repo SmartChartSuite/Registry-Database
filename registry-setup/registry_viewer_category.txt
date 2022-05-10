@@ -1,0 +1,14 @@
+create table category
+(
+    concept_id integer not null
+        constraint category_pk
+            primary key,
+    section    varchar(30),
+    category   varchar(30)
+);
+
+alter table category
+    owner to postgres;
+
+create unique index category_concept_code_uindex
+    on category (concept_id);
