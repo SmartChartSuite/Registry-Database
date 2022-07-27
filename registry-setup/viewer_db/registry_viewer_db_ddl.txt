@@ -1,0 +1,56 @@
+-- auto-generated definition
+create table annotation
+(
+    annotation_id serial
+        constraint annotation_pk
+            primary key,
+    content_id    integer                             not null,
+    case_id       integer                             not null,
+    user_id       integer,
+    text          text,
+    created       timestamp default CURRENT_TIMESTAMP not null
+);
+
+create unique index annotation_annotation_id_uindex
+    on annotation (annotation_id);
+
+-- auto-generated definition
+create table category
+(
+    concept_id integer not null
+        constraint category_pk
+            primary key,
+    section    varchar(30),
+    category   varchar(30),
+    question   varchar(50)
+);
+
+create unique index category_concept_code_uindex
+    on category (concept_id);
+
+-- auto-generated definition
+create table flag
+(
+    content_id integer                             not null
+        constraint viewer_data_pk
+            primary key,
+    flag       varchar(20),
+    case_id    integer                             not null,
+    created    timestamp default CURRENT_TIMESTAMP not null
+);
+
+create unique index viewer_data_observation_id_uindex
+    on flag (content_id);
+
+-- auto-generated definition
+create table "user"
+(
+    user_id serial
+        constraint user_pk
+            primary key
+);
+
+create unique index user_user_id_uindex
+    on "user" (user_id);
+
+

@@ -4,10 +4,10 @@ create table case_info
     case_info_id       bigint                              not null
         constraint case_info_pk
             primary key,
-    activated          timestamp,
-    created            timestamp default CURRENT_TIMESTAMP not null,
     patient_identifier varchar(510)                        not null,
     person_id          integer                             not null,
+    activated          timestamp,
+    created            timestamp default CURRENT_TIMESTAMP not null,
     job_id             varchar(50),
     status             varchar(50)                         not null,
     status_url         varchar(255),
@@ -27,5 +27,4 @@ create unique index case_case_info_id_uindex
 
 create index case_person_id_job_id_status_trigger_at_index
     on case_info (person_id, job_id, status, trigger_at);
-
 
