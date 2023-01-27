@@ -1,0 +1,8 @@
+alter table OBSERVATION
+    alter column observation_source_value varchar(500) null
+go
+
+alter table OBSERVATION
+    alter column value_as_string varchar(500) null
+go
+

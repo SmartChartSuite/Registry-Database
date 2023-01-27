@@ -1,0 +1,16 @@
+-- auto-generated definition
+create table case_log
+(
+    case_log_id  bigint                     not null
+        constraint case_logs_pk
+            primary key,
+    case_info_id bigint                     not null,
+    log_datetime datetime default getdate() not null,
+    text         text
+)
+go
+
+exec sp_addextendedproperty 'MS_Description', 'Logging all session operations', 'SCHEMA', 'dbo', 'TABLE', 'case_log'
+go
+
+
