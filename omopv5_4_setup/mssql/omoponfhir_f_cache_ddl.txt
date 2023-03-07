@@ -1,0 +1,11 @@
+create table f_cache
+(
+    cache_id   int  not null
+        constraint f_cache_pk
+            primary key,
+    key_text   text not null,
+    value_text text,
+    value_int  int,
+    status     int default (-1)
+)
+go

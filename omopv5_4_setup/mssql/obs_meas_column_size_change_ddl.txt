@@ -6,3 +6,6 @@ alter table OBSERVATION
     alter column value_as_string varchar(500) null
 go
 
+alter table MEASUREMENT 
+    alter column value_source_value type varchar(500) null
+go
