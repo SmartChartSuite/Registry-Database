@@ -1,4 +1,3 @@
--- auto-generated definition
 create table flag_info
 (
     flag_info_id   bigint                              not null
@@ -12,8 +11,3 @@ create table flag_info
     annotation     text,
     domain_data_id integer
 );
-
-alter table flag_info
-    owner to postgres;
-
-

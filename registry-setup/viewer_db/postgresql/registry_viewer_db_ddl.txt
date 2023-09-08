@@ -1,5 +1,5 @@
 -- auto-generated definition
-create table annotation
+create table viewer.annotation
 (
     annotation_id serial
         constraint annotation_pk
@@ -12,10 +12,10 @@ create table annotation
 );
 
 create unique index annotation_annotation_id_uindex
-    on annotation (annotation_id);
+    on viewer.annotation (annotation_id);
 
 -- auto-generated definition
-create table category
+create table viewer.category
 (
     concept_id integer not null
         constraint category_pk
@@ -26,10 +26,10 @@ create table category
 );
 
 create unique index category_concept_code_uindex
-    on category (concept_id);
+    on viewer.category (concept_id);
 
 -- auto-generated definition
-create table flag
+create table viewer.flag
 (
     content_id integer                             not null
         constraint viewer_data_pk
@@ -40,10 +40,10 @@ create table flag
 );
 
 create unique index viewer_data_observation_id_uindex
-    on flag (content_id);
+    on viewer.flag (content_id);
 
 -- auto-generated definition
-create table "user"
+create table viewer."user"
 (
     user_id serial
         constraint user_pk
@@ -51,6 +51,6 @@ create table "user"
 );
 
 create unique index user_user_id_uindex
-    on "user" (user_id);
+    on viewer."user" (user_id);
 
 

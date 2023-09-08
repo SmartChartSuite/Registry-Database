@@ -15,7 +15,7 @@ column_name_map = {'Element OMOP Concept ID' : 'concept_id',
                    'Vocabulary' : 'vocabulary',
                    'Element OMOP Concept Code' : 'concept_code'}
 
-parser = ConfigParser()
+parser = ConfigParser(interpolation=None)
 
 def config(filename='config.ini'):
     parser.read(filename)

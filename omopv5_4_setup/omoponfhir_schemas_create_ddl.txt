@@ -1,0 +1,2 @@
+CREATE SCHEMA vocab AUTHORIZATION <your_username>;
+CREATE SCHEMA viewer AUTHORIZATION <your_username>;

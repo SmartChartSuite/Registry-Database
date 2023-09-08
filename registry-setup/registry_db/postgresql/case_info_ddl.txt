@@ -6,22 +6,19 @@ create table case_info
             primary key,
     patient_identifier varchar(510)                        not null,
     person_id          integer                             not null,
-    activated          timestamp,
-    created            timestamp default CURRENT_TIMESTAMP not null,
+    activated_datetime          timestamp,
+    created_datetime            timestamp default CURRENT_TIMESTAMP not null,
     job_id             varchar(50),
     status             varchar(50)                         not null,
     status_url         varchar(255),
     server_url         varchar(255)                        not null,
-    trigger_at         timestamp,
-    last_updated       timestamp,
+    trigger_at_datetime         timestamp,
+    last_updated_datetime       timestamp,
     server_host        varchar(255)                        not null,
     tries_left         integer   default 3
 );
 
 comment on table case_info is 'Syphilis Registry Case Management';
-
-alter table case_info
-    owner to postgres;
 
 create unique index case_case_info_id_uindex
     on case_info (case_info_id);

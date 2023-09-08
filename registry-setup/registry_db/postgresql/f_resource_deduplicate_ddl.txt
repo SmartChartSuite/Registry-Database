@@ -1,4 +1,3 @@
--- auto-generated definition
 create table f_resource_deduplicate
 (
     id                     integer     not null
@@ -10,9 +9,6 @@ create table f_resource_deduplicate
     fhir_identifier_system varchar     not null,
     fhir_identifier_value  varchar     not null
 );
-
-alter table f_resource_deduplicate
-    owner to postgres;
 
 create unique index f_resource_deduplicate_id_uindex
     on f_resource_deduplicate (id);
