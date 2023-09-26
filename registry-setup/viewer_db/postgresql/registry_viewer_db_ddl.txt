@@ -54,3 +54,12 @@ create unique index user_user_id_uindex
     on viewer."user" (user_id);
 
 
+CREATE TABLE viewer.metadata (
+	metadata_id serial4 NOT NULL,
+	"name" varchar NOT NULL,
+	description varchar NULL,
+	tag varchar NOT NULL,
+	viewer_config json NULL,
+	CONSTRAINT metadata_pk PRIMARY KEY (metadata_id),
+	CONSTRAINT metadata_un UNIQUE (tag)
+);
