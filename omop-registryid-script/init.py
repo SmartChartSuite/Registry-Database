@@ -130,20 +130,20 @@ def getById1(cur, id):
 
 
 def updateConcept(conn, row):
-
-    sql = "UPDATE %s.concept SET concept_name = '%s', concept_code = '%s', concept_class_id = '%s', vocabulary_id = '%s'  WHERE concept_id = %s" % (vocab, str(row['concept_name']), str(row['concept_code']), str(row['concept_class_id']), str(row['vocabulary_id']), row['concept_id'])
+    sql = "UPDATE %s.concept SET concept_name = '%s', concept_code = '%s', concept_class_id = '%s', vocabulary_id = '%s'  WHERE concept_id = %s" % (vocab, str(row['concept_name']).replace("'", "''"), str(row['concept_code']), str(row['concept_class_id']), str(row['vocabulary_id']), row['concept_id'])
     cur.execute(sql)
     conn.commit()
+
 
 def updateConcept1(conn, row):
 
     sql = "UPDATE %s.category SET section = '%s', category = '%s', question = '%s' WHERE concept_id = %s" % (viewer, row['section'],
-    row['category'], row['concept_name'], row['concept_id'])
-    cur1.execute(sql)
+    row['category'], row['concept_name'].replace("'", "''"), row['concept_id'])
+    cur.execute(sql)
     conn.commit()
 
-def insertConcept(conn, row):
 
+def insertConcept(conn, row):
     cur = conn.cursor()
 
      # Get next available concept id
@@ -176,11 +176,13 @@ def insertConcept(conn, row):
 
     return concept
 
+
 def insertCategory(conn, row):
     cur = conn.cursor()
     sql = "INSERT INTO %s.category (concept_id, section, category, question) VALUES(%s, '%s', '%s', '%s')" % (viewer, row['concept_id'], row['section'], row['category'], row['concept_name'].replace("'", r"''"))
     cur.execute(sql)
     conn.commit()
+
 
 def needChange(row, concept):
     if concept is None:
@@ -197,9 +199,9 @@ config()
 conn = connectdb()
 cur = conn.cursor()
 
-conn1 = connectdb()
-cur1 = conn.cursor()
-
+# conn1 = connectdb()
+# cur1 = conn.cursor()
+#
 #get excel config
 e = getConfig('excel')
 
@@ -249,21 +251,21 @@ for index, row in cwb.iterrows():
         # wb.loc[index, inversecolumn['concept_class_id']] = str(concept[4])
         row['concept_id'] = concept['concept_id']
 
-    searched = getById1(cur1, row['concept_id'])
+    searched = getById1(cur, row['concept_id'])
     change = needChange(row, searched)
     if change:
-        updateConcept1(conn1, row)
+        updateConcept1(conn, row)
     else:
-        insertCategory(conn1, row)
+        insertCategory(conn, row)
 
 
 print(wb)
-wb.to_excel(e['name'], index=False)
+wb.to_excel(e['name'], sheet_name=e['sheet'], index=False)
 
 if conn is not None:
     conn.close()
     print('Database connection closed.')
 
-if conn1 is not None:
-    conn1.close()
-    print('Database connection1 closed.')
+# if conn1 is not None:
+#     conn1.close()
+#     print('Database connection1 closed.')

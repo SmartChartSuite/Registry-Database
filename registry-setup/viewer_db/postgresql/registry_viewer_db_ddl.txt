@@ -22,7 +22,7 @@ create table viewer.category
             primary key,
     section    varchar(30),
     category   varchar(30),
-    question   varchar(50)
+    question   varchar(255)
 );
 
 create unique index category_concept_code_uindex
