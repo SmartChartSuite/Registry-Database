@@ -1,0 +1,182 @@
+INSERT INTO viewer.category (concept_id,"section",category,question) VALUES
+	 (2000000166,'Treatment','','Sickle Cell Disease Treatment'),
+	 (2000000165,'Other Medical History','Urological','Priapism'),
+	 (2000000164,'Other Medical History','General','Multiple Organ Failure'),
+	 (2000000163,'Other Medical History','Dermatological','Dactylitis'),
+	 (2000000162,'Other Medical History','Dermatological','Skin Ulcer'),
+	 (2000000161,'Other Medical History','Orthopedic','Osteonecrosis'),
+	 (2000000160,'Other Medical History','Orthopedic','Avascular Necrosis'),
+	 (2000000159,'Diagnoses','Primary Diagnoses','Sickle Cell Arthropathy'),
+	 (2000000158,'Other Medical History','Ophthalmological','Vitreous Hemorrhage'),
+	 (2000000157,'Other Medical History','Ophthalmological','Blood in Anterior Chamber of Eye');
+INSERT INTO viewer.category (concept_id,"section",category,question) VALUES
+	 (2000000156,'Other Medical History','Ophthalmological','Macular Infarction'),
+	 (2000000155,'Other Medical History','Ophthalmological','Ischemic Maculopathy'),
+	 (2000000154,'Other Medical History','Ophthalmological','Central Retinal Artery Occlusion'),
+	 (2000000153,'Diagnoses','Primary Diagnoses','Retinopathy'),
+	 (2000000152,'Other Medical History','Neurological','Loss of Consciousness'),
+	 (2000000151,'Other Medical History','Neurological','Coma'),
+	 (2000000150,'Other Medical History','Neurological','Seizure'),
+	 (2000000149,'Other Medical History','Neurological','Aphasia'),
+	 (2000000148,'Other Medical History','General','General Weakness'),
+	 (2000000147,'Other Medical History','General','Headache');
+INSERT INTO viewer.category (concept_id,"section",category,question) VALUES
+	 (2000000146,'Other Medical History','Cardiovascular','Hemorrhagic Cerebral Infarction'),
+	 (2000000145,'Other Medical History','Cardiovascular','Cerebral Infarction'),
+	 (2000000144,'Other Medical History','Cardiovascular','Transient Ischemic Attack'),
+	 (2000000143,'Other Medical History','Cardiovascular','Ischemic Stroke'),
+	 (2000000142,'Other Medical History','Cardiovascular','Cerebrovascular Accident'),
+	 (2000000141,'Other Medical History','Cardiovascular','Right Ventricular Hypertrophy'),
+	 (2000000140,'Other Medical History','Cardiovascular','Left Ventricular Hypertrophy'),
+	 (2000000139,'Other Medical History','Cardiovascular','Ventricular Hypertrophy'),
+	 (2000000138,'Other Medical History','Cardiovascular','Peripheral Edema'),
+	 (2000000137,'Other Medical History','Cardiovascular','Palpitations');
+INSERT INTO viewer.category (concept_id,"section",category,question) VALUES
+	 (2000000136,'Other Medical History','Cardiovascular','Chest Pain'),
+	 (2000000135,'Other Medical History','General','Lethargy'),
+	 (2000000134,'Other Medical History','General','Fatigue'),
+	 (2000000133,'Other Medical History','Pulmonary','Cough'),
+	 (2000000132,'Other Medical History','Pulmonary','Respiratory Crackles'),
+	 (2000000131,'Other Medical History','Pulmonary','Shortness of Breath'),
+	 (2000000130,'Other Medical History','Pulmonary','Pulmonary Venous Hypertension'),
+	 (2000000129,'Other Medical History','Pulmonary','Pulmonary Arterial Hypertension'),
+	 (2000000128,'Other Medical History','Pulmonary','Pulmonary Hypertension'),
+	 (2000000127,'Other Medical History','Cardiovascular','Enlarged Heart');
+INSERT INTO viewer.category (concept_id,"section",category,question) VALUES
+	 (2000000126,'Other Medical History','Pulmonary','Pulmonary Infiltrate'),
+	 (2000000125,'Diagnoses','Related Diagnoses','Acute Chest Syndrome'),
+	 (2000000124,'Diagnoses','Related Diagnoses','Hypersplenism'),
+	 (2000000123,'Diagnoses','Related Diagnoses','Enlarged Spleen'),
+	 (2000000122,'Diagnoses','Related Diagnoses','RBC Sequestration in Spleen'),
+	 (2000000121,'Other Medical History','Hepatobiliary','Excess Nitrogen in Blood'),
+	 (2000000120,'Diagnoses','Related Diagnoses','Aplastic Crisis'),
+	 (2000000119,'Other Medical History','Hepatobiliary','Conjugated hyperbilirubinemia'),
+	 (2000000118,'Other Medical History','Hepatobiliary','Hyperbilirubinemia'),
+	 (2000000117,'Other Medical History','Anemia','Hemolysis');
+INSERT INTO viewer.category (concept_id,"section",category,question) VALUES
+	 (2000000116,'Other Medical History','Anemia','Aplastic Anemia'),
+	 (2000000115,'Other Medical History','Anemia','Chronic Hemolytic Anemia'),
+	 (2000000114,'Other Medical History','Anemia','Hemolytic Anemia'),
+	 (2000000113,'Other Medical History','Anemia','Chronic Anemia'),
+	 (2000000112,'Other Medical History','Anemia','Anemia'),
+	 (2000000111,'Other Medical History','Hepatobiliary','Enlarged Liver'),
+	 (2000000110,'Other Medical History','Hepatobiliary','Impaired Release of Bile'),
+	 (2000000109,'Other Medical History','Hepatobiliary','Jaundice'),
+	 (2000000108,'Other Medical History','Hepatobiliary','RBC Sequestration in Liver'),
+	 (2000000107,'Other Medical History','Hepatobiliary','Inflamed Gallbladder');
+INSERT INTO viewer.category (concept_id,"section",category,question) VALUES
+	 (2000000106,'Other Medical History','Hepatobiliary','Calculus of Common Bile Duct with Acute Cholecystitis'),
+	 (2000000105,'Other Medical History','Hepatobiliary','Biliary Stone'),
+	 (2000000104,'Other Medical History','Hepatobiliary','Gallstone'),
+	 (2000000103,'Diagnoses','Primary Diagnoses','Sickle Cell Hepatopathy'),
+	 (2000000102,'Other Medical History','Renal','Nocturnal Enuresis'),
+	 (2000000101,'Other Medical History','Renal','Hematuria'),
+	 (2000000100,'Other Medical History','Renal','Proteinuria'),
+	 (2000000099,'Other Medical History','Renal','Microalbuminuria'),
+	 (2000000098,'Other Medical History','Renal','Albuminuria'),
+	 (2000000097,'Other Medical History','Renal','Impairment of Urinary Concentration');
+INSERT INTO viewer.category (concept_id,"section",category,question) VALUES
+	 (2000000096,'Other Medical History','Renal','Renal Tubular Acidosis'),
+	 (2000000095,'Other Medical History','Renal','Focal Segmental Glomerulosclerosis'),
+	 (2000000094,'Other Medical History','Renal','Renal Papillary Necrosis'),
+	 (2000000093,'Other Medical History','Renal','Renal Failure Syndrome'),
+	 (2000000092,'Diagnoses','Primary Diagnoses','Sickle Cell Nephropathy'),
+	 (2000000091,'Diagnoses','Related Diagnoses','Pain'),
+	 (2000000090,'Diagnoses','Primary Diagnoses','Vaso-occlusive Event'),
+	 (2000000089,'Diagnoses','Primary Diagnoses','Sickle Cell Crisis'),
+	 (2000000088,'Lab Results','Reticulocytes','Punctate Reticulocytes per 100 Erithrocytes'),
+	 (2000000087,'Lab Results','Reticulocytes','Mid Reticulocyte Fraction');
+INSERT INTO viewer.category (concept_id,"section",category,question) VALUES
+	 (2000000086,'Lab Results','Reticulocytes','Mid Reticulocyte Count'),
+	 (2000000085,'Lab Results','Reticulocytes','Mature Reticulocyte Fraction'),
+	 (2000000084,'Lab Results','Reticulocytes','Mature Reticulocyte Count'),
+	 (2000000083,'Lab Results','Reticulocytes','Immature Reticulocyte Fraction'),
+	 (2000000082,'Lab Results','Reticulocytes','Immature Reticulocyte Count'),
+	 (2000000081,'Lab Results','Reticulocytes','Aggregate Reticulocytes per 100 Erithrocytes'),
+	 (2000000080,'Lab Results','Reticulocytes','Reticulocyte Corpuscular Hemoglobin Concentration Mean'),
+	 (2000000079,'Lab Results','Reticulocytes','Reticulocyte Mean Volume'),
+	 (2000000078,'Lab Results','Reticulocytes','Reticulocytes per 100 Erithrocytes'),
+	 (2000000077,'Lab Results','Reticulocytes','Reticulocyte Count');
+INSERT INTO viewer.category (concept_id,"section",category,question) VALUES
+	 (2000000076,'Lab Results','Blood Counts','Platelet Mean Volume'),
+	 (2000000075,'Lab Results','Blood Counts','Platelet Count'),
+	 (2000000074,'Lab Results','Blood Counts','Red Cell Distribution Width'),
+	 (2000000073,'Lab Results','Blood Counts','Mean Corpuscular Hemoglobin'),
+	 (2000000072,'Lab Results','Blood Counts','Mean Corpuscular Volume'),
+	 (2000000071,'Lab Results','Blood Counts','Hematocrit'),
+	 (2000000070,'Lab Results','Blood Counts','Hemoglobin'),
+	 (2000000069,'Lab Results','Blood Counts','Red Blood Cell Count'),
+	 (2000000068,'Lab Results','Blood Counts','White Blood Cell Count'),
+	 (2000000067,'Lab Results','Blood Counts','Neutrophil Count');
+INSERT INTO viewer.category (concept_id,"section",category,question) VALUES
+	 (2000000066,'Lab Results','Hemoglobin Electropheresis','Hemoglobin Other Pct'),
+	 (2000000065,'Lab Results','Hemoglobin Electropheresis','Hemoglobin S Pct'),
+	 (2000000064,'Lab Results','Hemoglobin Electropheresis','Hemoglobin F Pct'),
+	 (2000000063,'Lab Results','Hemoglobin Electropheresis','Hemoglobin D Pct'),
+	 (2000000062,'Lab Results','Hemoglobin Electropheresis','Hemoglobin C Pct'),
+	 (2000000061,'Lab Results','Hemoglobin Electropheresis','Hemoglobin A2 Pct'),
+	 (2000000060,'Lab Results','Hemoglobin Electropheresis','Hemoglobin A1c Pct'),
+	 (2000000059,'Lab Results','Hemoglobin Electropheresis','Hemoglobin A1 Pct'),
+	 (2000000058,'Lab Results','Hemoglobin Electropheresis','Hemoglobin A Pct'),
+	 (2000000057,'Other Medical History','Transfusion','Date of most recent WBC transfusion');
+INSERT INTO viewer.category (concept_id,"section",category,question) VALUES
+	 (2000000056,'Other Medical History','Transfusion','Date of most recent RBC transfusion'),
+	 (2000000055,'Other Medical History','Transfusion','Date of most recent serum transfusion'),
+	 (2000000054,'Other Medical History','Transfusion','Date of most recent platelet transfusion'),
+	 (2000000053,'Other Medical History','Transfusion','Date of most recent packed blood cell transfusion'),
+	 (2000000052,'Other Medical History','Transfusion','Date of most recent whole blood transfusion'),
+	 (2000000051,'Other Medical History','Transfusion','Date of most recent exchange transfusion'),
+	 (2000000050,'Other Medical History','Transfusion','Date of most recent transfusion of blood component'),
+	 (2000000049,'Other Medical History','Transfusion','Date of most recent transfusion of blood product'),
+	 (2000000048,'Other Medical History','Transfusion','History of blood transfusion reaction'),
+	 (2000000047,'Other Medical History','Transfusion','History of blood transfusion');
+INSERT INTO viewer.category (concept_id,"section",category,question) VALUES
+	 (2000000046,'Other Medical History','Transplant','History of allogenic bone marrow transplant'),
+	 (2000000045,'Other Medical History','Transplant','History of autologous bone marrow transplant'),
+	 (2000000044,'Other Medical History','Transplant','History of bone marrow transplant'),
+	 (2000000043,'Diagnoses','Related Diagnoses','Has Hereditary Persistence of Fetal Hemoglobin'),
+	 (2000000042,'Diagnoses','Related Diagnoses','Has Other Sickle Cell Disorder'),
+	 (2000000041,'Diagnoses','Related Diagnoses','Has Sickle Cell Delta Beta 0 Thalassemia'),
+	 (2000000040,'Diagnoses','Related Diagnoses','Has Sickle Cell Beta 0 Thalassemia'),
+	 (2000000039,'Diagnoses','Primary Diagnoses','Has Sickle Cell Beta + Thalassemia'),
+	 (2000000038,'Diagnoses','Primary Diagnoses','Has Sickle Cell Beta Thalassemia'),
+	 (2000000037,'Diagnoses','Primary Diagnoses','Has Sickle Cell Thalassemia Disease');
+INSERT INTO viewer.category (concept_id,"section",category,question) VALUES
+	 (2000000036,'Diagnoses','Primary Diagnoses','Has Sickle Cell Hemoglobin Lepore Disease'),
+	 (2000000035,'Diagnoses','Primary Diagnoses','Has Sickle Cell Hemoglobin O (Arab) Disease'),
+	 (2000000034,'Diagnoses','Primary Diagnoses','Has Sickle Cell Hemoglobin E Disease'),
+	 (2000000033,'Diagnoses','Primary Diagnoses','Has Sickle Cell Hemoglobin D Disease'),
+	 (2000000032,'Diagnoses','Primary Diagnoses','Has Sickle Cell Hemoglobin C Disease'),
+	 (2000000031,'Diagnoses','Primary Diagnoses','Has Sickle Cell Aneima with High Hemoglobin F'),
+	 (2000000030,'Diagnoses','Primary Diagnoses','Has Sickle Cell Anemia'),
+	 (2000000029,'Diagnoses','Related Diagnoses','Has Sickle Cell Trait'),
+	 (2000000028,'Other Medical History','Family History','Family History of Sickle Cell Anemia'),
+	 (2000000027,'Other Medical History','Family History','Family History of Sickle Cell Trait');
+INSERT INTO viewer.category (concept_id,"section",category,question) VALUES
+	 (2000000026,'Demographics','','Mother''s First Name'),
+	 (2000000025,'Demographics','','Mother''s Maiden Last Name'),
+	 (2000000022,'Diagnoses','Behavioral Factors','Behavioral Factors'),
+	 (2000000021,'Diagnoses','Comorbid Conditions','Comorbid Conditions'),
+	 (2000000020,'Diagnoses','Potential Complications','Potential Complications'),
+	 (2000000019,'Other Medical History','Pregnancy Related','Termination'),
+	 (2000000018,'Other Medical History','Pregnancy Related','Delivery Related'),
+	 (2000000017,'Other Medical History','Pregnancy Related','Pregnancy Test'),
+	 (2000000016,'Other Medical History','Pregnancy Related','Prenatal Care'),
+	 (2000000015,'Other Medical History','Pregnancy Related','Pregnancy General');
+INSERT INTO viewer.category (concept_id,"section",category,question) VALUES
+	 (2000000014,'Other Medical History','Pregnancy Related','Last Menstrual Period'),
+	 (2000000013,'Treatment','','Syphilis Treatment'),
+	 (2000000012,'Diagnoses','Symptoms','Symptoms'),
+	 (2000000011,'Diagnoses','Related Conditions','Related Diagnoses'),
+	 (2000000010,'Diagnoses','Syphilis','Syphilis Diagnoses'),
+	 (2000000009,'Lab Results','Non-Syphilis','Related Lab Results'),
+	 (2000000008,'Lab Results','Syphilis','Lab Results'),
+	 (2000000007,'Demographics','','Ethnicity'),
+	 (2000000006,'Demographics','','Race'),
+	 (2000000005,'Demographics','','Gender');
+INSERT INTO viewer.category (concept_id,"section",category,question) VALUES
+	 (2000000004,'Demographics','','Age'),
+	 (2000000003,'Demographics','','DOB'),
+	 (2000000002,'Demographics','','Last Name'),
+	 (2000000001,'Demographics','','First Name');
+

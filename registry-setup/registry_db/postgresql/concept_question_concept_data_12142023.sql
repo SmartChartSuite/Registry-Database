@@ -1,0 +1,182 @@
+INSERT INTO vocab.concept (concept_id,concept_name,domain_id,vocabulary_id,concept_class_id,standard_concept,concept_code,valid_start_date,valid_end_date,invalid_reason) VALUES
+	 (2000000166,'Sickle Cell Disease Treatment','Observation','SCD Registry','Observation','S','2000000173','2021-01-01','2099-12-31','N'),
+	 (2000000165,'Priapism','Observation','SCD Registry','Observation','S','2000000172','2021-01-01','2099-12-31','N'),
+	 (2000000164,'Multiple Organ Failure','Observation','SCD Registry','Observation','S','2000000171','2021-01-01','2099-12-31','N'),
+	 (2000000163,'Dactylitis','Observation','SCD Registry','Observation','S','2000000170','2021-01-01','2099-12-31','N'),
+	 (2000000162,'Skin Ulcer','Observation','SCD Registry','Observation','S','2000000164','2021-01-01','2099-12-31','N'),
+	 (2000000161,'Osteonecrosis','Observation','SCD Registry','Observation','S','2000000163','2021-01-01','2099-12-31','N'),
+	 (2000000160,'Avascular Necrosis','Observation','SCD Registry','Observation','S','2000000162','2021-01-01','2099-12-31','N'),
+	 (2000000159,'Sickle Cell Arthropathy','Observation','SCD Registry','Observation','S','2000000161','2021-01-01','2099-12-31','N'),
+	 (2000000158,'Vitreous Hemorrhage','Observation','SCD Registry','Observation','S','2000000160','2021-01-01','2099-12-31','N'),
+	 (2000000157,'Blood in Anterior Chamber of Eye','Observation','SCD Registry','Observation','S','2000000159','2021-01-01','2099-12-31','N');
+INSERT INTO vocab.concept (concept_id,concept_name,domain_id,vocabulary_id,concept_class_id,standard_concept,concept_code,valid_start_date,valid_end_date,invalid_reason) VALUES
+	 (2000000156,'Macular Infarction','Observation','SCD Registry','Observation','S','2000000158','2021-01-01','2099-12-31','N'),
+	 (2000000155,'Ischemic Maculopathy','Observation','SCD Registry','Observation','S','2000000157','2021-01-01','2099-12-31','N'),
+	 (2000000154,'Central Retinal Artery Occlusion','Observation','SCD Registry','Observation','S','2000000156','2021-01-01','2099-12-31','N'),
+	 (2000000153,'Retinopathy','Observation','SCD Registry','Observation','S','2000000153','2021-01-01','2099-12-31','N'),
+	 (2000000152,'Loss of Consciousness','Observation','SCD Registry','Observation','S','2000000152','2021-01-01','2099-12-31','N'),
+	 (2000000151,'Coma','Observation','SCD Registry','Observation','S','2000000151','2021-01-01','2099-12-31','N'),
+	 (2000000150,'Seizure','Observation','SCD Registry','Observation','S','2000000150','2021-01-01','2099-12-31','N'),
+	 (2000000149,'Aphasia','Observation','SCD Registry','Observation','S','2000000149','2021-01-01','2099-12-31','N'),
+	 (2000000148,'General Weakness','Observation','SCD Registry','Observation','S','2000000148','2021-01-01','2099-12-31','N'),
+	 (2000000147,'Headache','Observation','SCD Registry','Observation','S','2000000147','2021-01-01','2099-12-31','N');
+INSERT INTO vocab.concept (concept_id,concept_name,domain_id,vocabulary_id,concept_class_id,standard_concept,concept_code,valid_start_date,valid_end_date,invalid_reason) VALUES
+	 (2000000146,'Hemorrhagic Cerebral Infarction','Observation','SCD Registry','Observation','S','2000000146','2021-01-01','2099-12-31','N'),
+	 (2000000145,'Cerebral Infarction','Observation','SCD Registry','Observation','S','2000000145','2021-01-01','2099-12-31','N'),
+	 (2000000144,'Transient Ischemic Attack','Observation','SCD Registry','Observation','S','2000000144','2021-01-01','2099-12-31','N'),
+	 (2000000143,'Ischemic Stroke','Observation','SCD Registry','Observation','S','2000000143','2021-01-01','2099-12-31','N'),
+	 (2000000142,'Cerebrovascular Accident','Observation','SCD Registry','Observation','S','2000000142','2021-01-01','2099-12-31','N'),
+	 (2000000141,'Right Ventricular Hypertrophy','Observation','SCD Registry','Observation','S','2000000141','2021-01-01','2099-12-31','N'),
+	 (2000000140,'Left Ventricular Hypertrophy','Observation','SCD Registry','Observation','S','2000000140','2021-01-01','2099-12-31','N'),
+	 (2000000139,'Ventricular Hypertrophy','Observation','SCD Registry','Observation','S','2000000139','2021-01-01','2099-12-31','N'),
+	 (2000000138,'Peripheral Edema','Observation','SCD Registry','Observation','S','2000000138','2021-01-01','2099-12-31','N'),
+	 (2000000137,'Palpitations','Observation','SCD Registry','Observation','S','2000000137','2021-01-01','2099-12-31','N');
+INSERT INTO vocab.concept (concept_id,concept_name,domain_id,vocabulary_id,concept_class_id,standard_concept,concept_code,valid_start_date,valid_end_date,invalid_reason) VALUES
+	 (2000000136,'Chest Pain','Observation','SCD Registry','Observation','S','2000000136','2021-01-01','2099-12-31','N'),
+	 (2000000135,'Lethargy','Observation','SCD Registry','Observation','S','2000000135','2021-01-01','2099-12-31','N'),
+	 (2000000134,'Fatigue','Observation','SCD Registry','Observation','S','2000000134','2021-01-01','2099-12-31','N'),
+	 (2000000133,'Cough','Observation','SCD Registry','Observation','S','2000000133','2021-01-01','2099-12-31','N'),
+	 (2000000132,'Respiratory Crackles','Observation','SCD Registry','Observation','S','2000000132','2021-01-01','2099-12-31','N'),
+	 (2000000131,'Shortness of Breath','Observation','SCD Registry','Observation','S','2000000131','2021-01-01','2099-12-31','N'),
+	 (2000000130,'Pulmonary Venous Hypertension','Observation','SCD Registry','Observation','S','2000000130','2021-01-01','2099-12-31','N'),
+	 (2000000129,'Pulmonary Arterial Hypertension','Observation','SCD Registry','Observation','S','2000000129','2021-01-01','2099-12-31','N'),
+	 (2000000128,'Pulmonary Hypertension','Observation','SCD Registry','Observation','S','2000000128','2021-01-01','2099-12-31','N'),
+	 (2000000127,'Enlarged Heart','Observation','SCD Registry','Observation','S','2000000127','2021-01-01','2099-12-31','N');
+INSERT INTO vocab.concept (concept_id,concept_name,domain_id,vocabulary_id,concept_class_id,standard_concept,concept_code,valid_start_date,valid_end_date,invalid_reason) VALUES
+	 (2000000126,'Pulmonary Infiltrate','Observation','SCD Registry','Observation','S','2000000126','2021-01-01','2099-12-31','N'),
+	 (2000000125,'Acute Chest Syndrome','Observation','SCD Registry','Observation','S','2000000125','2021-01-01','2099-12-31','N'),
+	 (2000000124,'Hypersplenism','Observation','SCD Registry','Observation','S','2000000124','2021-01-01','2099-12-31','N'),
+	 (2000000123,'Enlarged Spleen','Observation','SCD Registry','Observation','S','2000000123','2021-01-01','2099-12-31','N'),
+	 (2000000122,'RBC Sequestration in Spleen','Observation','SCD Registry','Observation','S','2000000122','2021-01-01','2099-12-31','N'),
+	 (2000000121,'Excess Nitrogen in Blood','Observation','SCD Registry','Observation','S','2000000121','2021-01-01','2099-12-31','N'),
+	 (2000000120,'Aplastic Crisis','Observation','SCD Registry','Observation','S','2000000120','2021-01-01','2099-12-31','N'),
+	 (2000000119,'Conjugated hyperbilirubinemia','Observation','SCD Registry','Observation','S','2000000119','2021-01-01','2099-12-31','N'),
+	 (2000000118,'Hyperbilirubinemia','Observation','SCD Registry','Observation','S','2000000118','2021-01-01','2099-12-31','N'),
+	 (2000000117,'Hemolysis','Observation','SCD Registry','Observation','S','2000000117','2021-01-01','2099-12-31','N');
+INSERT INTO vocab.concept (concept_id,concept_name,domain_id,vocabulary_id,concept_class_id,standard_concept,concept_code,valid_start_date,valid_end_date,invalid_reason) VALUES
+	 (2000000116,'Aplastic Anemia','Observation','SCD Registry','Observation','S','2000000116','2021-01-01','2099-12-31','N'),
+	 (2000000115,'Chronic Hemolytic Anemia','Observation','SCD Registry','Observation','S','2000000115','2021-01-01','2099-12-31','N'),
+	 (2000000114,'Hemolytic Anemia','Observation','SCD Registry','Observation','S','2000000114','2021-01-01','2099-12-31','N'),
+	 (2000000113,'Chronic Anemia','Observation','SCD Registry','Observation','S','2000000113','2021-01-01','2099-12-31','N'),
+	 (2000000112,'Anemia','Observation','SCD Registry','Observation','S','2000000112','2021-01-01','2099-12-31','N'),
+	 (2000000111,'Enlarged Liver','Observation','SCD Registry','Observation','S','2000000111','2021-01-01','2099-12-31','N'),
+	 (2000000110,'Impaired Release of Bile','Observation','SCD Registry','Observation','S','2000000110','2021-01-01','2099-12-31','N'),
+	 (2000000109,'Jaundice','Observation','SCD Registry','Observation','S','2000000109','2021-01-01','2099-12-31','N'),
+	 (2000000108,'RBC Sequestration in Liver','Observation','SCD Registry','Observation','S','2000000108','2021-01-01','2099-12-31','N'),
+	 (2000000107,'Inflamed Gallbladder','Observation','SCD Registry','Observation','S','2000000107','2021-01-01','2099-12-31','N');
+INSERT INTO vocab.concept (concept_id,concept_name,domain_id,vocabulary_id,concept_class_id,standard_concept,concept_code,valid_start_date,valid_end_date,invalid_reason) VALUES
+	 (2000000106,'Calculus of Common Bile Duct with Acute Cholecystitis','Observation','SCD Registry','Observation','S','2000000106','2021-01-01','2099-12-31','N'),
+	 (2000000105,'Biliary Stone','Observation','SCD Registry','Observation','S','2000000105','2021-01-01','2099-12-31','N'),
+	 (2000000104,'Gallstone','Observation','SCD Registry','Observation','S','2000000104','2021-01-01','2099-12-31','N'),
+	 (2000000103,'Sickle Cell Hepatopathy','Observation','SCD Registry','Observation','S','2000000103','2021-01-01','2099-12-31','N'),
+	 (2000000102,'Nocturnal Enuresis','Observation','SCD Registry','Observation','S','2000000102','2021-01-01','2099-12-31','N'),
+	 (2000000101,'Hematuria','Observation','SCD Registry','Observation','S','2000000101','2021-01-01','2099-12-31','N'),
+	 (2000000100,'Proteinuria','Observation','SCD Registry','Observation','S','2000000100','2021-01-01','2099-12-31','N'),
+	 (2000000099,'Microalbuminuria','Observation','SCD Registry','Observation','S','2000000099','2021-01-01','2099-12-31','N'),
+	 (2000000098,'Albuminuria','Observation','SCD Registry','Observation','S','2000000098','2021-01-01','2099-12-31','N'),
+	 (2000000097,'Impairment of Urinary Concentration','Observation','SCD Registry','Observation','S','2000000097','2021-01-01','2099-12-31','N');
+INSERT INTO vocab.concept (concept_id,concept_name,domain_id,vocabulary_id,concept_class_id,standard_concept,concept_code,valid_start_date,valid_end_date,invalid_reason) VALUES
+	 (2000000096,'Renal Tubular Acidosis','Observation','SCD Registry','Observation','S','2000000096','2021-01-01','2099-12-31','N'),
+	 (2000000095,'Focal Segmental Glomerulosclerosis','Observation','SCD Registry','Observation','S','2000000095','2021-01-01','2099-12-31','N'),
+	 (2000000094,'Renal Papillary Necrosis','Observation','SCD Registry','Observation','S','2000000094','2021-01-01','2099-12-31','N'),
+	 (2000000093,'Renal Failure Syndrome','Observation','SCD Registry','Observation','S','2000000093','2021-01-01','2099-12-31','N'),
+	 (2000000092,'Sickle Cell Nephropathy','Observation','SCD Registry','Observation','S','2000000092','2021-01-01','2099-12-31','N'),
+	 (2000000091,'Pain','Observation','SCD Registry','Observation','S','2000000091','2021-01-01','2099-12-31','N'),
+	 (2000000090,'Vaso-occlusive Event','Observation','SCD Registry','Observation','S','2000000090','2021-01-01','2099-12-31','N'),
+	 (2000000089,'Sickle Cell Crisis','Observation','SCD Registry','Observation','S','2000000089','2021-01-01','2099-12-31','N'),
+	 (2000000088,'Punctate Reticulocytes per 100 Erithrocytes','Observation','SCD Registry','Observation','S','2000000088','2021-01-01','2099-12-31','N'),
+	 (2000000087,'Mid Reticulocyte Fraction','Observation','SCD Registry','Observation','S','2000000087','2021-01-01','2099-12-31','N');
+INSERT INTO vocab.concept (concept_id,concept_name,domain_id,vocabulary_id,concept_class_id,standard_concept,concept_code,valid_start_date,valid_end_date,invalid_reason) VALUES
+	 (2000000086,'Mid Reticulocyte Count','Observation','SCD Registry','Observation','S','2000000086','2021-01-01','2099-12-31','N'),
+	 (2000000085,'Mature Reticulocyte Fraction','Observation','SCD Registry','Observation','S','2000000085','2021-01-01','2099-12-31','N'),
+	 (2000000084,'Mature Reticulocyte Count','Observation','SCD Registry','Observation','S','2000000084','2021-01-01','2099-12-31','N'),
+	 (2000000083,'Immature Reticulocyte Fraction','Observation','SCD Registry','Observation','S','2000000083','2021-01-01','2099-12-31','N'),
+	 (2000000082,'Immature Reticulocyte Count','Observation','SCD Registry','Observation','S','2000000082','2021-01-01','2099-12-31','N'),
+	 (2000000081,'Aggregate Reticulocytes per 100 Erithrocytes','Observation','SCD Registry','Observation','S','2000000081','2021-01-01','2099-12-31','N'),
+	 (2000000080,'Reticulocyte Corpuscular Hemoglobin Concentration Mean','Observation','SCD Registry','Observation','S','2000000080','2021-01-01','2099-12-31','N'),
+	 (2000000079,'Reticulocyte Mean Volume','Observation','SCD Registry','Observation','S','2000000079','2021-01-01','2099-12-31','N'),
+	 (2000000078,'Reticulocytes per 100 Erithrocytes','Observation','SCD Registry','Observation','S','2000000078','2021-01-01','2099-12-31','N'),
+	 (2000000077,'Reticulocyte Count','Observation','SCD Registry','Observation','S','2000000077','2021-01-01','2099-12-31','N');
+INSERT INTO vocab.concept (concept_id,concept_name,domain_id,vocabulary_id,concept_class_id,standard_concept,concept_code,valid_start_date,valid_end_date,invalid_reason) VALUES
+	 (2000000076,'Platelet Mean Volume','Observation','SCD Registry','Observation','S','2000000076','2021-01-01','2099-12-31','N'),
+	 (2000000075,'Platelet Count','Observation','SCD Registry','Observation','S','2000000075','2021-01-01','2099-12-31','N'),
+	 (2000000074,'Red Cell Distribution Width','Observation','SCD Registry','Observation','S','2000000074','2021-01-01','2099-12-31','N'),
+	 (2000000073,'Mean Corpuscular Hemoglobin','Observation','SCD Registry','Observation','S','2000000073','2021-01-01','2099-12-31','N'),
+	 (2000000072,'Mean Corpuscular Volume','Observation','SCD Registry','Observation','S','2000000072','2021-01-01','2099-12-31','N'),
+	 (2000000071,'Hematocrit','Observation','SCD Registry','Observation','S','2000000071','2021-01-01','2099-12-31','N'),
+	 (2000000070,'Hemoglobin','Observation','SCD Registry','Observation','S','2000000070','2021-01-01','2099-12-31','N'),
+	 (2000000069,'Red Blood Cell Count','Observation','SCD Registry','Observation','S','2000000069','2021-01-01','2099-12-31','N'),
+	 (2000000068,'White Blood Cell Count','Observation','SCD Registry','Observation','S','2000000068','2021-01-01','2099-12-31','N'),
+	 (2000000067,'Neutrophil Count','Observation','SCD Registry','Observation','S','2000000067','2021-01-01','2099-12-31','N');
+INSERT INTO vocab.concept (concept_id,concept_name,domain_id,vocabulary_id,concept_class_id,standard_concept,concept_code,valid_start_date,valid_end_date,invalid_reason) VALUES
+	 (2000000066,'Hemoglobin Other Pct','Observation','SCD Registry','Observation','S','2000000066','2021-01-01','2099-12-31','N'),
+	 (2000000065,'Hemoglobin S Pct','Observation','SCD Registry','Observation','S','2000000065','2021-01-01','2099-12-31','N'),
+	 (2000000064,'Hemoglobin F Pct','Observation','SCD Registry','Observation','S','2000000064','2021-01-01','2099-12-31','N'),
+	 (2000000063,'Hemoglobin D Pct','Observation','SCD Registry','Observation','S','2000000063','2021-01-01','2099-12-31','N'),
+	 (2000000062,'Hemoglobin C Pct','Observation','SCD Registry','Observation','S','2000000062','2021-01-01','2099-12-31','N'),
+	 (2000000061,'Hemoglobin A2 Pct','Observation','SCD Registry','Observation','S','2000000061','2021-01-01','2099-12-31','N'),
+	 (2000000060,'Hemoglobin A1c Pct','Observation','SCD Registry','Observation','S','2000000060','2021-01-01','2099-12-31','N'),
+	 (2000000059,'Hemoglobin A1 Pct','Observation','SCD Registry','Observation','S','2000000059','2021-01-01','2099-12-31','N'),
+	 (2000000058,'Hemoglobin A Pct','Observation','SCD Registry','Observation','S','2000000058','2021-01-01','2099-12-31','N'),
+	 (2000000057,'Date of most recent WBC transfusion','Observation','SCD Registry','Observation','S','2000000057','2021-01-01','2099-12-31','N');
+INSERT INTO vocab.concept (concept_id,concept_name,domain_id,vocabulary_id,concept_class_id,standard_concept,concept_code,valid_start_date,valid_end_date,invalid_reason) VALUES
+	 (2000000056,'Date of most recent RBC transfusion','Observation','SCD Registry','Observation','S','2000000056','2021-01-01','2099-12-31','N'),
+	 (2000000055,'Date of most recent serum transfusion','Observation','SCD Registry','Observation','S','2000000055','2021-01-01','2099-12-31','N'),
+	 (2000000054,'Date of most recent platelet transfusion','Observation','SCD Registry','Observation','S','2000000054','2021-01-01','2099-12-31','N'),
+	 (2000000053,'Date of most recent packed blood cell transfusion','Observation','SCD Registry','Observation','S','2000000053','2021-01-01','2099-12-31','N'),
+	 (2000000052,'Date of most recent whole blood transfusion','Observation','SCD Registry','Observation','S','2000000052','2021-01-01','2099-12-31','N'),
+	 (2000000051,'Date of most recent exchange transfusion','Observation','SCD Registry','Observation','S','2000000051','2021-01-01','2099-12-31','N'),
+	 (2000000050,'Date of most recent transfusion of blood component','Observation','SCD Registry','Observation','S','2000000050','2021-01-01','2099-12-31','N'),
+	 (2000000049,'Date of most recent transfusion of blood product','Observation','SCD Registry','Observation','S','2000000049','2021-01-01','2099-12-31','N'),
+	 (2000000048,'History of blood transfusion reaction','Observation','SCD Registry','Observation','S','2000000048','2021-01-01','2099-12-31','N'),
+	 (2000000047,'History of blood transfusion','Observation','SCD Registry','Observation','S','2000000047','2021-01-01','2099-12-31','N');
+INSERT INTO vocab.concept (concept_id,concept_name,domain_id,vocabulary_id,concept_class_id,standard_concept,concept_code,valid_start_date,valid_end_date,invalid_reason) VALUES
+	 (2000000046,'History of allogenic bone marrow transplant','Observation','SCD Registry','Observation','S','2000000046','2021-01-01','2099-12-31','N'),
+	 (2000000045,'History of autologous bone marrow transplant','Observation','SCD Registry','Observation','S','2000000045','2021-01-01','2099-12-31','N'),
+	 (2000000044,'History of bone marrow transplant','Observation','SCD Registry','Observation','S','2000000044','2021-01-01','2099-12-31','N'),
+	 (2000000043,'Has Hereditary Persistence of Fetal Hemoglobin','Observation','SCD Registry','Observation','S','2000000043','2021-01-01','2099-12-31','N'),
+	 (2000000042,'Has Other Sickle Cell Disorder','Observation','SCD Registry','Observation','S','2000000042','2021-01-01','2099-12-31','N'),
+	 (2000000041,'Has Sickle Cell Delta Beta 0 Thalassemia','Observation','SCD Registry','Observation','S','2000000041','2021-01-01','2099-12-31','N'),
+	 (2000000040,'Has Sickle Cell Beta 0 Thalassemia','Observation','SCD Registry','Observation','S','2000000040','2021-01-01','2099-12-31','N'),
+	 (2000000039,'Has Sickle Cell Beta + Thalassemia','Observation','SCD Registry','Observation','S','2000000039','2021-01-01','2099-12-31','N'),
+	 (2000000038,'Has Sickle Cell Beta Thalassemia','Observation','SCD Registry','Observation','S','2000000038','2021-01-01','2099-12-31','N'),
+	 (2000000037,'Has Sickle Cell Thalassemia Disease','Observation','SCD Registry','Observation','S','2000000037','2021-01-01','2099-12-31','N');
+INSERT INTO vocab.concept (concept_id,concept_name,domain_id,vocabulary_id,concept_class_id,standard_concept,concept_code,valid_start_date,valid_end_date,invalid_reason) VALUES
+	 (2000000036,'Has Sickle Cell Hemoglobin Lepore Disease','Observation','SCD Registry','Observation','S','2000000036','2021-01-01','2099-12-31','N'),
+	 (2000000035,'Has Sickle Cell Hemoglobin O (Arab) Disease','Observation','SCD Registry','Observation','S','2000000035','2021-01-01','2099-12-31','N'),
+	 (2000000034,'Has Sickle Cell Hemoglobin E Disease','Observation','SCD Registry','Observation','S','2000000034','2021-01-01','2099-12-31','N'),
+	 (2000000033,'Has Sickle Cell Hemoglobin D Disease','Observation','SCD Registry','Observation','S','2000000033','2021-01-01','2099-12-31','N'),
+	 (2000000032,'Has Sickle Cell Hemoglobin C Disease','Observation','SCD Registry','Observation','S','2000000032','2021-01-01','2099-12-31','N'),
+	 (2000000031,'Has Sickle Cell Aneima with High Hemoglobin F','Observation','SCD Registry','Observation','S','2000000031','2021-01-01','2099-12-31','N'),
+	 (2000000030,'Has Sickle Cell Anemia','Observation','SCD Registry','Observation','S','2000000030','2021-01-01','2099-12-31','N'),
+	 (2000000029,'Has Sickle Cell Trait','Observation','SCD Registry','Observation','S','2000000029','2021-01-01','2099-12-31','N'),
+	 (2000000028,'Family History of Sickle Cell Anemia','Observation','SCD Registry','Observation','S','2000000028','2021-01-01','2099-12-31','N'),
+	 (2000000027,'Family History of Sickle Cell Trait','Observation','SCD Registry','Observation','S','2000000027','2021-01-01','2099-12-31','N');
+INSERT INTO vocab.concept (concept_id,concept_name,domain_id,vocabulary_id,concept_class_id,standard_concept,concept_code,valid_start_date,valid_end_date,invalid_reason) VALUES
+	 (2000000026,'Mother''s First Name','Observation','SCD Registry','Observation','S','2000000026','2021-01-01','2099-12-31','N'),
+	 (2000000025,'Mother''s Maiden Last Name','Observation','SCD Registry','Observation','S','2000000025','2021-01-01','2099-12-31','N'),
+	 (2000000022,'Behavioral Factors','Observation','Syphilis Registry','Observation','S','2000000022','2021-01-01','2099-12-31','N'),
+	 (2000000021,'Comorbid Conditions','Observation','Syphilis Registry','Observation','S','2000000021','2021-01-01','2099-12-31','N'),
+	 (2000000020,'Potential Complications','Observation','Syphilis Registry','Observation','S','2000000020','2021-01-01','2099-12-31','N'),
+	 (2000000019,'Termination','Observation','Syphilis Registry','Observation','S','2000000019','2021-01-01','2099-12-31','N'),
+	 (2000000018,'Delivery Related','Observation','Syphilis Registry','Observation','S','2000000018','2021-01-01','2099-12-31','N'),
+	 (2000000017,'Pregnancy Test','Observation','Syphilis Registry','Observation','S','2000000017','2021-01-01','2099-12-31','N'),
+	 (2000000016,'Prenatal Care','Observation','Syphilis Registry','Observation','S','2000000016','2021-01-01','2099-12-31','N'),
+	 (2000000015,'Pregnancy General','Observation','Syphilis Registry','Observation','S','2000000015','2021-01-01','2099-12-31','N');
+INSERT INTO vocab.concept (concept_id,concept_name,domain_id,vocabulary_id,concept_class_id,standard_concept,concept_code,valid_start_date,valid_end_date,invalid_reason) VALUES
+	 (2000000014,'Last Menstrual Period','Observation','Syphilis Registry','Observation','S','2000000014','2021-01-01','2099-12-31','N'),
+	 (2000000013,'Syphilis Treatment','Observation','Syphilis Registry','Observation','S','2000000013','2021-01-01','2099-12-31','N'),
+	 (2000000012,'Symptoms','Observation','Syphilis Registry','Observation','S','2000000012','2021-01-01','2099-12-31','N'),
+	 (2000000011,'Related Diagnoses','Observation','Syphilis Registry','Observation','S','2000000011','2021-01-01','2099-12-31','N'),
+	 (2000000010,'Syphilis Diagnoses','Observation','Syphilis Registry','Observation','S','2000000010','2021-01-01','2099-12-31','N'),
+	 (2000000009,'Related Lab Results','Observation','Syphilis Registry','Observation','S','2000000009','2021-01-01','2099-12-31','N'),
+	 (2000000008,'Lab Results','Observation','Syphilis Registry','Observation','S','2000000008','2021-01-01','2099-12-31','N'),
+	 (2000000007,'Ethnicity','Observation','Syphilis Registry','Observation','S','2000000007','2021-01-01','2099-12-31','N'),
+	 (2000000006,'Race','Observation','Common Registry','Observation','S','2000000006','2021-01-01','2099-12-31','N'),
+	 (2000000005,'Gender','Observation','Common Registry','Observation','S','2000000005','2021-01-01','2099-12-31','N');
+INSERT INTO vocab.concept (concept_id,concept_name,domain_id,vocabulary_id,concept_class_id,standard_concept,concept_code,valid_start_date,valid_end_date,invalid_reason) VALUES
+	 (2000000004,'Age','Observation','Common Registry','Observation','S','2000000004','2021-01-01','2099-12-31','N'),
+	 (2000000003,'DOB','Observation','Common Registry','Observation','S','2000000003','2021-01-01','2099-12-31','N'),
+	 (2000000002,'Last Name','Observation','Common Registry','Observation','S','2000000002','2021-01-01','2099-12-31','N'),
+	 (2000000001,'First Name','Observation','Common Registry','Observation','S','2000000001','2021-01-01','2099-12-31','N');
+
