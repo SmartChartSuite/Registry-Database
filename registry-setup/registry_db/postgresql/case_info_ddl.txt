@@ -1,28 +1,20 @@
--- auto-generated definition
-create table case_info
-(
-    case_info_id       bigint                              not null
-        constraint case_info_pk
-            primary key,
-    patient_identifier varchar(510)                        not null,
-    person_id          integer                             not null,
-    activated_datetime          timestamp,
-    created_datetime            timestamp default CURRENT_TIMESTAMP not null,
-    job_id             varchar(50),
-    status             varchar(50)                         not null,
-    status_url         varchar(255),
-    server_url         varchar(255)                        not null,
-    trigger_at_datetime         timestamp,
-    last_updated_datetime       timestamp,
-    server_host        varchar(255)                        not null,
-    tries_left         integer   default 3
+CREATE TABLE case_info (
+	case_info_id int8 NOT NULL,
+	patient_identifier varchar(510) NOT NULL,
+	person_id int4 NOT NULL,
+	activated_datetime timestamp NULL,
+	created_datetime timestamp DEFAULT CURRENT_TIMESTAMP NOT NULL,
+	job_id varchar(50) NULL,
+	status varchar(50) NOT NULL,
+	status_url varchar(255) NULL,
+	server_url varchar(255) NOT NULL,
+	trigger_at_datetime timestamp NULL,
+	last_updated_datetime timestamp NULL,
+	server_host varchar(255) NOT NULL,
+	tries_left int4 DEFAULT 3 NULL,
+	last_successful_datetime timestamp NULL,
+	case_started_running_datetime timestamp NULL,
+	CONSTRAINT case_info_pk PRIMARY KEY (case_info_id)
 );
-
-comment on table case_info is 'Syphilis Registry Case Management';
-
-create unique index case_case_info_id_uindex
-    on case_info (case_info_id);
-
-create index case_person_id_job_id_status_trigger_at_index
-    on case_info (person_id, job_id, status, trigger_at_datetime);
-
+CREATE UNIQUE INDEX case_case_info_id_uindex ON case_info USING btree (case_info_id);
+CREATE INDEX case_person_id_job_id_status_trigger_at_index ON case_info USING btree (person_id, job_id, status, trigger_at_datetime);
