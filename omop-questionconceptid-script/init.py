@@ -130,7 +130,18 @@ def getById1(cur, id):
 
 
 def updateConcept(conn, row):
-    sql = "UPDATE %s.concept SET concept_name = '%s', concept_code = '%s', concept_class_id = '%s', vocabulary_id = '%s'  WHERE concept_id = %s" % (vocab, str(row['concept_name']).replace("'", "''"), str(row['concept_code']), str(row['concept_class_id']), str(row['vocabulary_id']), row['concept_id'])
+    if row['concept_class_id'] == 'Special Code':
+        domain_id = 'Condition'
+    elif row['concept_class_id'] == 'Vocabulary':
+        domain_id = 'Metadata'
+    else:
+        domain_id = row['concept_class_id']
+
+    sql = "UPDATE %s.concept SET concept_name = '%s', domain_id = '%s', concept_code = '%s', concept_class_id = '%s', " \
+          "vocabulary_id = '%s'  WHERE concept_id = %s" % (vocab, str(row['concept_name']).replace("'", "''"),
+                                                           domain_id.replace("'", "''"), str(row['concept_code']),
+                                                           str(row['concept_class_id']), str(row['vocabulary_id']),
+                                                           row['concept_id'])
     cur.execute(sql)
     conn.commit()
 
@@ -164,7 +175,13 @@ def insertConcept(conn, row):
     concept['vocabulary_id'] = row['vocabulary_id']
     concept['concept_class_id'] = row['concept_class_id']
     concept['concept_code'] = str(conceptid)
-    
+    if row['concept_class_id'] == 'Special Code':
+        concept['domain_id'] = 'Condition'
+    elif row['concept_class_id'] == 'Vocabulary':
+        concept['domain_id'] = 'Metadata'
+    else:
+        concept['domain_id'] = row['concept_class_id']
+
     # execute_batch(cur, insert_str, default_params)
     columns = ", ".join(list(concept.keys()))
     values = list(concept.values())
@@ -227,7 +244,7 @@ for index, row in cwb.iterrows():
         modified = True
     else:
         row['concept_id'] = int(row['concept_id'])
-        row['concept_code'] = int(row['concept_code'])
+        # row['concept_code'] = int(row['concept_code'])
         # if type(row['concept_code']) is float:
         #     row['concept_code'] = int(row['concept_code'])
         # else:
@@ -251,6 +268,10 @@ for index, row in cwb.iterrows():
         # wb.loc[index, inversecolumn['concept_class_id']] = str(concept[4])
         row['concept_id'] = concept['concept_id']
 
+# Viewer table. Skip this if section is empty.
+    if row['section'] != row['section']:
+        continue
+        
     searched = getById1(cur, row['concept_id'])
     change = needChange(row, searched)
     if change:
