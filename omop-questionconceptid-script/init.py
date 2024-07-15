@@ -11,10 +11,10 @@ from datetime import datetime
 vocab = "vocab"
 viewer = "viewer"
 name_of_table = "{}.concept".format(vocab)
-column_name_map = {'Element OMOP Concept ID': 'concept_id',
-                   'Element OMOP Concept Name': 'concept_name',
-                   'Vocabulary': 'vocabulary',
-                   'Element OMOP Concept Code': 'concept_code'}
+# column_name_map = {'Element OMOP Concept ID': 'concept_id',
+#                    'Element OMOP Concept Name': 'concept_name',
+#                    'Vocabulary': 'vocabulary',
+#                    'Element OMOP Concept Code': 'concept_code'}
 
 parser = ConfigParser(interpolation=None)
 
@@ -130,16 +130,9 @@ def getById1(cur, id):
 
 
 def updateConcept(conn, row):
-    if row['concept_class_id'] == 'Special Code':
-        domain_id = 'Condition'
-    elif row['concept_class_id'] == 'Vocabulary':
-        domain_id = 'Metadata'
-    else:
-        domain_id = row['concept_class_id']
-
     sql = "UPDATE %s.concept SET concept_name = '%s', domain_id = '%s', concept_code = '%s', concept_class_id = '%s', " \
           "vocabulary_id = '%s'  WHERE concept_id = %s" % (vocab, str(row['concept_name']).replace("'", "''"),
-                                                           domain_id.replace("'", "''"), str(row['concept_code']),
+                                                           str(row['domain_id']).replace("'", "''"), str(row['concept_code']),
                                                            str(row['concept_class_id']), str(row['vocabulary_id']),
                                                            row['concept_id'])
     cur.execute(sql)
@@ -175,12 +168,7 @@ def insertConcept(conn, row):
     concept['vocabulary_id'] = row['vocabulary_id']
     concept['concept_class_id'] = row['concept_class_id']
     concept['concept_code'] = str(conceptid)
-    if row['concept_class_id'] == 'Special Code':
-        concept['domain_id'] = 'Condition'
-    elif row['concept_class_id'] == 'Vocabulary':
-        concept['domain_id'] = 'Metadata'
-    else:
-        concept['domain_id'] = row['concept_class_id']
+    concept['domain_id'] = row['domain_id']
 
     # execute_batch(cur, insert_str, default_params)
     columns = ", ".join(list(concept.keys()))
@@ -235,7 +223,7 @@ for index, row in cwb.iterrows():
         row['category'] = ""
 
     #Create mapping frame 
-    print(row['concept_id'], row['concept_name'], row['vocabulary_id'], str(row['concept_code']), row['section'], row['category'])
+    print(row['concept_id'], row['concept_name'], row['vocabulary_id'], row['domain_id'], str(row['concept_code']), row['section'], row['category'])
 
     modified = False
     concept = {}
@@ -271,7 +259,7 @@ for index, row in cwb.iterrows():
 # Viewer table. Skip this if section is empty.
     if row['section'] != row['section']:
         continue
-        
+
     searched = getById1(cur, row['concept_id'])
     change = needChange(row, searched)
     if change:
