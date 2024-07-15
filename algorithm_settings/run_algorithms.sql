@@ -23,6 +23,6 @@ $function$
 
 -- Permissions
 
-ALTER FUNCTION scd.run_algorithms(int4, int4) OWNER TO sascs;
-GRANT ALL ON FUNCTION scd.run_algorithms(int4, int4) TO sascs;
+ALTER FUNCTION scd.run_algorithms(int4, int4) OWNER TO postgres;
+GRANT ALL ON FUNCTION scd.run_algorithms(int4, int4) TO postgres;
 

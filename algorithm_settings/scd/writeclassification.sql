@@ -50,6 +50,6 @@ $function$
 
 -- Permissions
 
-ALTER FUNCTION scd.writeclassification(int4, int4) OWNER TO sascs;
-GRANT ALL ON FUNCTION scd.writeclassification(int4, int4) TO sascs;
+ALTER FUNCTION scd.writeclassification(int4, int4) OWNER TO postgres;
+GRANT ALL ON FUNCTION scd.writeclassification(int4, int4) TO postgres;
 

@@ -202,6 +202,6 @@ $function$
 
 -- Permissions
 
-ALTER FUNCTION scd.classifypatient(int4) OWNER TO sascs;
-GRANT ALL ON FUNCTION scd.classifypatient(int4) TO sascs;
+ALTER FUNCTION scd.classifypatient(int4) OWNER TO postgres;
+GRANT ALL ON FUNCTION scd.classifypatient(int4) TO postgres;
 
