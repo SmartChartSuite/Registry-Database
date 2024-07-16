@@ -1,6 +1,5 @@
 -- see the result(s)
-select 	fp.family_name as family_name,
-		fp.given1_name  as given_name, 
+select 		fp.person_id as id,
 		vc.concept_name as class_desc, 
 		vc.concept_code as class_code, 
 		m.measurement_datetime as calculated_time 

@@ -167,7 +167,7 @@ def insertConcept(conn, row):
     concept['concept_name'] = row['concept_name'].replace("'", r"''")
     concept['vocabulary_id'] = row['vocabulary_id']
     concept['concept_class_id'] = row['concept_class_id']
-    concept['concept_code'] = str(conceptid)
+    concept['concept_code'] = row['concept_code']
     concept['domain_id'] = row['domain_id']
 
     # execute_batch(cur, insert_str, default_params)
