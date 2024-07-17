@@ -13,10 +13,17 @@ BEGIN
                 o.observation_id, 
                 o.person_id, 
                 o.observation_concept_id, 
+                o.observation_date,
                 o.value_as_string, 
                 CASE 
-                    WHEN array_length(regexp_split_to_array(o.value_as_string, '\^'), 1) = 5 THEN
-                        CAST(NULLIF(regexp_replace(split_part(o.value_as_string, '^', 5), '[^0-9.-]+', '', 'g'), '') AS numeric)
+                    WHEN array_length(regexp_split_to_array(o.value_as_string, '\^'), 1) = 6 THEN
+                        CAST(NULLIF(regexp_replace(split_part(o.value_as_string, '^', 4), '[^0-9.-]+', '', 'g'), '') AS numeric)
+                    ELSE
+                        NULL
+				END,
+                CASE 
+                    WHEN array_length(regexp_split_to_array(o.value_as_string, '\^'), 1) = 6 THEN
+                        split_part(o.value_as_string, '^', 5)
                     ELSE
                         NULL
 				END,
