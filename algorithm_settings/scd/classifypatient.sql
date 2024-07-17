@@ -5,22 +5,22 @@ CREATE OR REPLACE FUNCTION scd.classifypatient(personid integer)
  LANGUAGE plpgsql
 AS $function$
 DECLARE
-    reticulocyte scd.measurement_record[];
-    absolute_reticulocyte scd.measurement_record[];
-    total_bilirubin scd.measurement_record[];
-    direct_bilirubin scd.measurement_record[];
-    ldh scd.measurement_record[];
-    hgb_a scd.measurement_record[];
-    hgb_a1 scd.measurement_record[];
-    hgb_a2 scd.measurement_record[];
-    hgb_c scd.measurement_record[];
-    hgb_d scd.measurement_record[];
-    hgb_e scd.measurement_record[];
-    hgb_f scd.measurement_record[];
-    hgb_s scd.measurement_record[];
-    hgb_other scd.measurement_record[];
-    hgb_all scd.measurement_record[];
-    hgb_cde scd.measurement_record[];
+    reticulocyte scd.fobsconcept[];
+    absolute_reticulocyte scd.fobsconcept[];
+    total_bilirubin scd.fobsconcept[];
+    direct_bilirubin scd.fobsconcept[];
+    ldh scd.fobsconcept[];
+    hgb_a scd.fobsconcept[];
+    hgb_a1 scd.fobsconcept[];
+    hgb_a2 scd.fobsconcept[];
+    hgb_c scd.fobsconcept[];
+    hgb_d scd.fobsconcept[];
+    hgb_e scd.fobsconcept[];
+    hgb_f scd.fobsconcept[];
+    hgb_s scd.fobsconcept[];
+    hgb_other scd.fobsconcept[];
+    hgb_all scd.fobsconcept[];
+    hgb_cde scd.fobsconcept[];
     reticulocyte_count integer;
     absolute_reticulocyte_count integer;
     total_bilirubin_count integer;
@@ -39,62 +39,35 @@ DECLARE
     score integer;
     result_concept vocab.concept;
 BEGIN
-    -- Selecting measurements into arrays
-    SELECT ARRAY(SELECT ROW(m.*)::scd.measurement_record FROM scd.measurement m 
-                 WHERE m.person_id = personId AND m.measurement_source_value = '17849-1' 
-                 ORDER BY m.measurement_date DESC) INTO reticulocyte;
-
-    SELECT ARRAY(SELECT ROW(m.*)::scd.measurement_record FROM scd.measurement m 
-                 WHERE m.person_id = personId AND m.measurement_source_value = '14196-0' 
-                 ORDER BY m.measurement_date DESC) INTO absolute_reticulocyte;
-
-    SELECT ARRAY(SELECT ROW(m.*)::scd.measurement_record FROM scd.measurement m 
-                 WHERE m.person_id = personId AND m.measurement_source_value = '1975-2' 
-                 ORDER BY m.measurement_date DESC) INTO total_bilirubin;
-
-    SELECT ARRAY(SELECT ROW(m.*)::scd.measurement_record FROM scd.measurement m 
-                 WHERE m.person_id = personId AND m.measurement_source_value = '1968-7' 
-                 ORDER BY m.measurement_date DESC) INTO direct_bilirubin;
-
-    SELECT ARRAY(SELECT ROW(m.*)::scd.measurement_record FROM scd.measurement m 
-                 WHERE m.person_id = personId AND m.measurement_source_value = '14804-9' 
-                 ORDER BY m.measurement_date DESC) INTO ldh;
-
-    SELECT ARRAY(SELECT ROW(m.*)::scd.measurement_record FROM scd.measurement m 
-                 WHERE m.person_id = personId AND m.measurement_source_value IN ('20572-4','42244-4') 
-                 ORDER BY m.measurement_date DESC) INTO hgb_a;
-
-    SELECT ARRAY(SELECT ROW(m.*)::scd.measurement_record FROM scd.measurement m 
-                 WHERE m.person_id = personId AND m.measurement_source_value = '4547-6' 
-                 ORDER BY m.measurement_date DESC) INTO hgb_a1;
-
-    SELECT ARRAY(SELECT ROW(m.*)::scd.measurement_record FROM scd.measurement m 
-                 WHERE m.person_id = personId AND m.measurement_source_value IN ('42244-4','42245-1') 
-                 ORDER BY m.measurement_date DESC) INTO hgb_a2;
-
-    SELECT ARRAY(SELECT ROW(m.*)::scd.measurement_record FROM scd.measurement m 
-                 WHERE m.person_id = personId AND m.measurement_source_value IN ('4563-3','44920-7') 
-                 ORDER BY m.measurement_date DESC) INTO hgb_c;
-
-    SELECT ARRAY(SELECT ROW(m.*)::scd.measurement_record FROM scd.measurement m 
-                 WHERE m.person_id = personId AND m.measurement_source_value = '44921-5' 
-                 ORDER BY m.measurement_date DESC) INTO hgb_d;
-
-    SELECT ARRAY(SELECT ROW(m.*)::scd.measurement_record FROM scd.measurement m 
-                 WHERE m.person_id = personId AND m.measurement_source_value = '44922-3' 
-                 ORDER BY m.measurement_date DESC) INTO hgb_e;
-
-    SELECT ARRAY(SELECT ROW(m.*)::scd.measurement_record FROM scd.measurement m 
-                 WHERE m.person_id = personId AND m.measurement_source_value IN ('465-5','42246-9') 
-                 ORDER BY m.measurement_date DESC) INTO hgb_f;
-
-    SELECT ARRAY(SELECT ROW(m.*)::scd.measurement_record FROM scd.measurement m 
-                 WHERE m.person_id = personId AND m.measurement_source_value IN ('4625-0', '44923-1') 
-                 ORDER BY m.measurement_date DESC) INTO hgb_s;
-
-    SELECT ARRAY(SELECT ROW(m.*)::scd.measurement_record FROM scd.measurement m 
-                 WHERE m.person_id = personId AND m.measurement_source_value = '42248-5' 
-                 ORDER BY m.measurement_date DESC) INTO hgb_other;
+    -- Call the function for different measurement source values and store the results into respective arrays
+    -- Reticulocyte
+    SELECT * INTO reticulocyte FROM scd.query_fobs_with_numeric_value(personId, ARRAY['17849-1']);
+    -- Absolute Reticulocyte
+    SELECT * INTO absolute_reticulocyte FROM scd.query_fobs_with_numeric_value(personId, ARRAY['14196-0']);
+    -- Total Bilirubin
+    SELECT * INTO total_bilirubin FROM scd.query_fobs_with_numeric_value(personId, ARRAY['1975-2']);
+    -- Direct Bilirubin
+    SELECT * INTO direct_bilirubin FROM scd.query_fobs_with_numeric_value(personId, ARRAY['1968-7']);
+    -- LDH
+    SELECT * INTO ldh FROM scd.query_fobs_with_numeric_value(personId, ARRAY['14804-9']);
+    -- HGB A
+    SELECT * INTO hgb_a FROM scd.query_fobs_with_numeric_value(personId, ARRAY['20572-4', '42244-4']);
+    -- HGB A1
+    SELECT * INTO hgb_a1 FROM scd.query_fobs_with_numeric_value(personId, ARRAY['4547-6']);
+    -- HGB A2
+    SELECT * INTO hgb_a2 FROM scd.query_fobs_with_numeric_value(personId, ARRAY['42244-4', '42245-1']);
+    -- HGB C
+    SELECT * INTO hgb_c FROM scd.query_fobs_with_numeric_value(personId, ARRAY['4563-3', '44920-7']);
+    -- HGB D
+    SELECT * INTO hgb_d FROM scd.query_fobs_with_numeric_value(personId, ARRAY['44921-5']);
+    -- HGB E
+    SELECT * INTO hgb_e FROM scd.query_fobs_with_numeric_value(personId, ARRAY['44922-3']);
+    -- HGB F
+    SELECT * INTO hgb_f FROM scd.query_fobs_with_numeric_value(personId, ARRAY['465-5', '42246-9']);
+    -- HGB S
+    SELECT * INTO hgb_s FROM scd.query_fobs_with_numeric_value(personId, ARRAY['4625-0', '44923-1']);
+    -- HGB Other
+    SELECT * INTO hgb_other FROM scd.query_fobs_with_numeric_value(personId, ARRAY['42248-5']);
 
     -- Concatenating all hgb arrays into hgb_all
     hgb_all := hgb_a || hgb_a1 || hgb_a2 || hgb_c || hgb_d || hgb_f || hgb_s || hgb_other;
@@ -127,35 +100,35 @@ BEGIN
     -- Electrophoresis tests
     IF hgb_count > 1 AND lab_count >= 15 THEN
         IF array_length(hgb_s, 1) >= 1 THEN
-            IF hgb_s[1].measurement_as_number >= 0.50 THEN
+            IF hgb_s[1].value_as_numeric >= 0.50 THEN
                 SELECT * INTO result_concept FROM scd.writeclassification(personId, 1); --hemoglobin electrophoresis confirmation of disease
                 RETURN result_concept;
-            ELSIF hgb_s[1].measurement_as_number =< 0.50 AND hgb_s[1].measurement_as_number >= 0.10 THEN
+            ELSIF hgb_s[1].value_as_numeric =< 0.50 AND hgb_s[1].value_as_numeric >= 0.10 THEN
                 SELECT * INTO result_concept FROM scd.writeclassification(personId, 2); --MOST likely has sickle cell disease but no electrophoresis or genetic confirmation 
             ELSIF array_length(hgb_a, 1) >= 1 THEN
-                IF hgb_a[1].measurement_as_number >= 0.5 AND hgb_a[1].measurement_as_number =< 0.65
-                AND hgb_s[1].measurement_as_number >= 0.35 AND hgb_s[1].measurement_as_number =< 0.45 THEN 
+                IF hgb_a[1].value_as_numeric >= 0.5 AND hgb_a[1].value_as_numeric =< 0.65
+                AND hgb_s[1].value_as_numeric >= 0.35 AND hgb_s[1].value_as_numeric =< 0.45 THEN 
                     SELECT * INTO result_concept FROM scd.writeclassification(personId, 9); --Confirmed Sickle Cell Trait through Electrophoresis
                     RETURN result_concept;
                 END IF;
             ELSIF array_length(hgb_cde, 1) >= 1 THEN --Confirmed Sickle Cell Disease through compound heterozygote
                 IF array_length(hgb_c, 1) >= 1 THEN
-                    IF hgb_s[1].measurement_as_number >= 0.40 AND hgb_s[1].measurement_as_number =< 0.48
-                    AND hgb_c[1].measurement_as_number >= 0.40 AND hgb_c[1].measurement_as_number =< 0.48 THEN
+                    IF hgb_s[1].value_as_numeric >= 0.40 AND hgb_s[1].value_as_numeric =< 0.48
+                    AND hgb_c[1].value_as_numeric >= 0.40 AND hgb_c[1].value_as_numeric =< 0.48 THEN
                         SELECT * INTO result_concept FROM scd.writeclassification(personId, 1);
                         RETURN result_concept;
                     END IF;
                 END IF;
                 IF array_length(hgb_d, 1) >= 1 THEN
-                    IF hgb_s[1].measurement_as_number >= 0.40 AND hgb_s[1].measurement_as_number =< 0.48
-                    AND hgb_d[1].measurement_as_number >= 0.40 AND hgb_d[1].measurement_as_number =< 0.48 THEN
+                    IF hgb_s[1].value_as_numeric >= 0.40 AND hgb_s[1].value_as_numeric =< 0.48
+                    AND hgb_d[1].value_as_numeric >= 0.40 AND hgb_d[1].value_as_numeric =< 0.48 THEN
                         SELECT * INTO result_concept FROM scd.writeclassification(personId, 1);
                         RETURN result_concept;
                     END IF;
                 END IF;
                 IF array_length(hgb_e, 1) >= 1 THEN
-                    IF hgb_s[1].measurement_as_number >= 0.40 AND hgb_s[1].measurement_as_number =< 0.48
-                    AND hgb_e[1].measurement_as_number >= 0.40 AND hgb_e[1].measurement_as_number =< 0.48 THEN
+                    IF hgb_s[1].value_as_numeric >= 0.40 AND hgb_s[1].value_as_numeric =< 0.48
+                    AND hgb_e[1].value_as_numeric >= 0.40 AND hgb_e[1].value_as_numeric =< 0.48 THEN
                         SELECT * INTO result_concept FROM scd.writeclassification(personId, 1);
                         RETURN result_concept;
                     END IF;
