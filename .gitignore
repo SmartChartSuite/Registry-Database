@@ -151,3 +151,4 @@ local.properties
 
 env*.*
 config.ini
+omop-questionconceptid-script/config.ini
