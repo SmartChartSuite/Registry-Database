@@ -150,4 +150,4 @@ local.properties
 .factorypath
 
 env*.*
-omop-questionconceptid-script/config.ini
+config.ini
