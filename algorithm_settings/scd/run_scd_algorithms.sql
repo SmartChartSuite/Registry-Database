@@ -16,7 +16,7 @@ AS $function$
 		-- add more algorithms below
 	
 		-- TODO: we figure out what to return. we may return table with outputs from algorithms
-		return 0;
+		return return_val;
 	end;
 $function$
 ;
