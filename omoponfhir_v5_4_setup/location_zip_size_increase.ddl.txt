@@ -1,0 +1,2 @@
+ALTER TABLE syphilis."location" ALTER COLUMN zip TYPE varchar(10) USING zip::varchar(10);
+
